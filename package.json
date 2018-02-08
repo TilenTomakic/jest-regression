@@ -1,0 +1,12 @@
+{
+  "name": "jest-regression",
+  "version": "1.0.0",
+  "description": "Jest test regression detection. ",
+  "main": "index.js",
+  "repository": "https://github.com/TilenTomakic/jest-regression.git",
+  "author": "Tilen Tomakić <tilen@tomakic.com>",
+  "license": "MIT",
+  "bin": {
+    "jest-regression": "./bin/diff.js"
+  }
+}

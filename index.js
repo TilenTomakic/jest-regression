@@ -4,10 +4,6 @@ var execSync = require('child_process').execSync;
 var path     = require('path');
 var fs       = require('fs');
 
-var commit      = execSync('git rev-parse HEAD').toString().split('\n').join('');
-var commitShort = execSync('git rev-parse --short HEAD').toString().split('\n').join('');
-var branch      = execSync('git rev-parse --abbrev-ref HEAD').toString().split('\n').join('');
-
 var config = {
   skip                : false,
   skipNextProcessor   : false,
@@ -26,6 +22,10 @@ try {
 
 module.exports = function (data) {
   if (!config.skip) {
+    // var commit      = execSync('git rev-parse HEAD').toString().split('\n').join('');
+    var commitShort = execSync('git rev-parse --short HEAD').toString().split('\n').join('');
+    // var branch      = execSync('git rev-parse --abbrev-ref HEAD').toString().split('\n').join('');
+
     var out = {};
     data.testResults.forEach(y => {
       var path = y.testFilePath;

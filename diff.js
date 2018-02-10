@@ -10,8 +10,8 @@ if (packageJson) {
   Object.assign(config, JSON.parse(packageJson)[ 'jest-regression' ]);
 }
 
-var codeA = process.argv[2];
-var codeB = process.argv[3];
+var codeA = process.argv[3];
+var codeB = process.argv[2];
 console.log('Checking for test regression from commit ' + codeB + ' to ' + codeA + '.');
 
 

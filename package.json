@@ -4,7 +4,7 @@
   "description": "Jest test regression detection. ",
   "main": "index.js",
   "repository": "https://github.com/TilenTomakic/jest-regression.git",
-  "author": "Tilen Tomakić <tilen@tomakic.com>",
+  "author": "Tilen Tomakić (https://github.com/TilenTomakic)",
   "license": "MIT",
   "bin": {
     "jest-regression": "./bin/diff.js"

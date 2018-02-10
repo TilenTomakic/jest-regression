@@ -18,18 +18,19 @@ try {
     Object.assign(config, JSON.parse(packageJson)[ 'jest-regression' ]);
   }
 } catch (e) {
+  // ignore
 }
 
 module.exports = function (data) {
   if (!config.skip) {
-    // var commit      = execSync('git rev-parse HEAD').toString().split('\n').join('');
     var commitShort = execSync('git rev-parse --short HEAD').toString().split('\n').join('');
+    // var commit      = execSync('git rev-parse HEAD').toString().split('\n').join('');
     // var branch      = execSync('git rev-parse --abbrev-ref HEAD').toString().split('\n').join('');
 
     var out = {};
-    data.testResults.forEach(y => {
+    data.testResults.forEach(function(x) {
       var path = y.testFilePath;
-      y.testResults.forEach(x => {
+      y.testResults.forEach(function(x) {
         var fullName = x.fullName;
         var status   = x.status; // "failed" | "pending" | "passed"
 

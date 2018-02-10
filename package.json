@@ -1,6 +1,6 @@
 {
   "name": "jest-regression",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Jest test regression detection. ",
   "main": "index.js",
   "repository": "https://github.com/TilenTomakic/jest-regression.git",

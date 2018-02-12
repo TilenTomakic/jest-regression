@@ -28,7 +28,7 @@ module.exports = function (data) {
     // var branch      = execSync('git rev-parse --abbrev-ref HEAD').toString().split('\n').join('');
 
     var out = {};
-    data.testResults.forEach(function(x) {
+    data.testResults.forEach(function(y) {
       var path = y.testFilePath;
       y.testResults.forEach(function(x) {
         var fullName = x.fullName;
